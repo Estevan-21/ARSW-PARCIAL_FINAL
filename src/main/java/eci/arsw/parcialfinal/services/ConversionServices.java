@@ -12,7 +12,7 @@ import java.util.Map;
  * @author 2109950
  */
 public interface ConversionServices {
-    Map<Float, Float> celTofar(Float cel);
+    Map<String, Float> celTofar(Float cel);
     
-     Map<Float, Float> farTocel(Float far);
+     Map<String, Float> farTocel(Float far);
 }

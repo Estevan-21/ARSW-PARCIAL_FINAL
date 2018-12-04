@@ -48,10 +48,10 @@ public class ConversionServicesImplTest {
         System.out.println("celTofar");
         Float cel = (float) 10 ;
         ConversionServicesImpl instance = new ConversionServicesImpl();
-        Map<Float, Float> expResult = new ConcurrentHashMap<>();
-        expResult.put((float)10,(float)50);
+        Map<String, Float> expResult = new ConcurrentHashMap<>();
+        expResult.put("cel",(float)50);
         System.out.println(expResult.toString());
-        Map<Float, Float> result = instance.celTofar(cel);
+        Map<String, Float> result = instance.celTofar(cel);
         System.out.println(result.toString());
         assertEquals(expResult, result);        
     }
@@ -64,10 +64,10 @@ public class ConversionServicesImplTest {
         System.out.println("farTocel");
         Float far = (float) 10;
         ConversionServicesImpl instance = new ConversionServicesImpl();
-        Map<Float, Float> expResult = new ConcurrentHashMap<>();
-        expResult.put((float)10,(float)-12.222223);
+        Map<String, Float> expResult = new ConcurrentHashMap<>();
+        expResult.put("far",(float)-12.222223);
         System.out.println(expResult.toString());
-        Map<Float, Float> result = instance.farTocel(far);
+        Map<String, Float> result = instance.farTocel(far);
         System.out.println(result.toString());
         assertEquals(expResult, result);        
     }

@@ -18,28 +18,28 @@ import org.springframework.stereotype.Service;
 @Service 
 public class ConversionServicesImpl implements ConversionServices {
     
-    private static  Map<Float, Float> convert;
+    private static  Map<String, Float> convert;
     /**
      *
      * @param cel
      * @return
      */
-     public  Map<Float, Float> celTofar(Float cel){
+     public  Map<String, Float> celTofar(Float cel){
          convert = new ConcurrentHashMap<>();
          float div=(float) 9/5;
          float far=(cel*div)+32;            
-         convert.put(cel,far);
+         convert.put("cel",far);
          return convert;
      }
 
 
 
     @Override
-    public Map<Float, Float> farTocel(Float far) {
+    public Map<String, Float> farTocel(Float far) {
         convert = new ConcurrentHashMap<>();
         float div=(float) 5/9;
         float cel=(far-32)*div;
-        convert.put(far,cel);
+        convert.put("far",cel);
         return convert;
     }
      
