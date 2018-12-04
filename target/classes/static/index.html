@@ -24,7 +24,7 @@ and open the template in the editor.
         </form>
         <!--RESTULT-->
         <div id="result" style='position: absolute; top: 85px; left: 200px'></div>
-        
+
         <!-- Farenheit a cel -->
         <label for="Text1" class="p-3 mb-2 bg-secondary text-white" style='position: absolute; top: 200px; left: 50px;  width: 805px' align="center">Ingrese el valor en grados Farenheit para convertir a grados Centígrados</label>
         <form  style='position: absolute; top: 230px; left: 350px'>
@@ -39,7 +39,16 @@ and open the template in the editor.
         <!--RESTULT-->
         <div id="result2" style='position: absolute; top: 255px; left: 200px'></div>
 
-
+        <label for="Text1" class="p-3 mb-2 bg-secondary text-white" style='position: relative; top: 300px; ' align="center">
+            <H2>Descripción: </H2>
+            <H3> API PARA CONVERSIÓN DE TEMPERATURA </H3>
+            <H4> El API que se provee contiene 2 métodos, con los cuales se realiza la conversión entre grados Centígrados y Farenheit y viceversa, los dos métodos que se proveen son
+                celTofar y farTocel.</h4>
+            <H4> Para realizar una petición get a alguno de los métodos se debe conectar al a URL: http://localhost:8080/conversion/{método celTofar o farTocel}/{cantidad a convertir}</h4>
+            <H4> EJEMPLOS: </h4>
+            <h4> Convertir 10 grados Centígrados a Farenheit:   http://localhost:8080/conversion/celTofar/10 </h4>
+            <h4> Convertir 10 grados Farenheit a Centigrados   http://localhost:8080/conversion/farTocel/10 </h4>
+        </label>
 
         <script src ="https://unpkg.com/axios/dist/axios.min.js " ></script> 
         <script src="./js/conversionController.js" type="text/javascript"></script>
