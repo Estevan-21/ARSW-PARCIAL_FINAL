@@ -27,10 +27,7 @@ public class ConversionServicesImpl implements ConversionServices {
      public  Map<Float, Float> celTofar(Float cel){
          convert = new ConcurrentHashMap<>();
          float div=(float) 9/5;
-         float far=(cel*div)+32;
-         System.out.println(cel);
-         System.out.println(div);
-         
+         float far=(cel*div)+32;            
          convert.put(cel,far);
          return convert;
      }
